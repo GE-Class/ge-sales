@@ -2,7 +2,9 @@
   "name": "ge-sales",
   "version": "1.0.0",
   "description": "Sample GE App to track sales",
-  "scripts": {},
+  "scripts": {
+    "watch" : "webpack --progress --colors --watch"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GE-Class/ge-sales.git"
