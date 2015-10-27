@@ -10,7 +10,6 @@ router.post('/', function(req, res){
     name: req.body.name,
     gender: req.body.gender,
   }).then(function(response) {
-    console.log('db response', response.dataValues);
     res.send(response.dataValues);
   });
 
