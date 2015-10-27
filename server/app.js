@@ -9,8 +9,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
-app.listen(3000, function() {
-  console.log('***********************************');
-  console.log('listening:', 3000);
-  console.log('***********************************');
+var models = require('./models');
+models.sequelize.sync().then(function(){
+  app.listen(3000, function() {
+    console.log('***********************************');
+    console.log('listening:', 3000);
+    console.log('***********************************');
+  });
 });
+
+app.use('/users', require('./routes/users.js'));
