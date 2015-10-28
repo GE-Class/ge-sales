@@ -14,6 +14,10 @@ export default function($http){
     static all(){
       return $http.get('/users');
     }
+
+    static delete(id){
+      return $http.delete('/users/' + id);
+    }
   }
 
   return User;

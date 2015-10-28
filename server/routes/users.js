@@ -19,4 +19,14 @@ router.get('/', function(req, res){
   });
 });
 
+router.delete('/:id', function(req, res){
+  models.User.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(affectedRows){
+    res.send(req.params.id);
+  });
+});
+
 module.exports = router;
