@@ -10,6 +10,10 @@ export default function($http){
     save(){
       return $http.post('/users', this);
     }
+
+    static all(){
+      return $http.get('/users');
+    }
   }
 
   return User;
