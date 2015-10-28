@@ -1,0 +1,30 @@
+<h3>Products</h3>
+
+<p>
+  <a style="width: 150px;" class="btn btn-info" ui-sref="new_product">New Product</a>
+</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Delete</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Cost</th>
+      <th>Image</th>
+      <th>Created</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="p in products">
+      <td><button class="btn btn-danger" ng-click="delete(p.id)">X</button></td>
+      <td>{{p.id}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.cost | currency}}</td>
+      <td><img style="height: 50px;" class="img-responsive img-thumbnail" ng-src={{p.image}} /></td>
+      <td>{{p.createdAt | date}}</td>
+      <td>{{p.updatedAt | date}}</td>
+    </tr>
+  </tbody>
+</table>
