@@ -19,6 +19,15 @@ router.get('/', function(req, res){
   });
 });
 
+router.get('/count/:page', function(req, res){
+  models.User.findAndCountAll({
+    limit: 2,
+    offset: (req.params.page - 1) * 2
+  }).then(function(response) {
+    res.send(response);
+  });
+});
+
 router.delete('/:id', function(req, res){
   models.User.destroy({
     where: {

@@ -4,6 +4,22 @@
   <a style="width: 150px;" class="btn btn-info" ui-sref="new_user">New User</a>
 </p>
 
+<nav>
+  <ul class="pagination">
+    <li>
+      <a aria-label="Previous" ng-click="prev()">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a>{{current}}</a></li>
+    <li>
+      <a aria-label="Next" ng-click="next()">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
 <table class="table table-striped">
   <thead>
     <tr>
