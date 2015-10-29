@@ -1,0 +1,40 @@
+<h3>New Sale</h3>
+
+<p>
+  <a style="width: 150px;" class="btn btn-info" ui-sref="sales">Sales</a>
+</p>
+
+<div class="row">
+  <div class="col-lg-4">
+    <form>
+      <div class="form-group">
+        <label>User</label>
+        <select class="form-control" ng-model="sale.user_id">
+          <option value="{{u.id}}" ng-repeat="u in users">{{u.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Product</label>
+        <select class="form-control" ng-model="sale.product_id">
+          <option value="{{p.id}}" ng-repeat="p in products">{{p.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input class="form-control" type="date" ng-model="sale.date" />
+      </div>
+      <div class="form-group">
+        <label>Amount</label>
+        <input class="form-control" type="number" ng-model="sale.amount" />
+      </div>
+      <div class="form-group">
+        <label>Quantity</label>
+        <input class="form-control" type="number" ng-model="sale.quantity" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success" ng-click="add()">Add Sale</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-lg-8"></div>
+</div>

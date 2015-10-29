@@ -20,3 +20,4 @@ models.sequelize.sync().then(function(){
 
 app.use('/users', require('./routes/users.js'));
 app.use('/products', require('./routes/products.js'));
+app.use('/sales', require('./routes/sales.js'));

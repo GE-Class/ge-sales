@@ -4,6 +4,12 @@ module.exports = function(sequelize, DataTypes) {
     title: DataTypes.STRING,
     gender: DataTypes.STRING,
     age: DataTypes.INTEGER
+  },{
+    classMethods: {
+      associate: function(models){
+        User.hasMany(models.Sale, {foreignKey: 'user_id'})
+      }
+    }
   });
 
   return User;

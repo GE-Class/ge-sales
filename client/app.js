@@ -5,8 +5,11 @@ import NewUserController from './controllers/users/new.js';
 import UsersController from './controllers/users/list.js';
 import NewProductController from './controllers/products/new.js';
 import ProductsController from './controllers/products/list.js';
+import NewSaleController from './controllers/sales/new.js';
+import SalesController from './controllers/sales/list.js';
 import User from './models/user.js';
 import Product from './models/product.js';
+import Sale from './models/sale.js';
 
 let app = angular.module('geSales', ['ui.router']);
 
@@ -16,5 +19,8 @@ app
 .controller('UsersController', UsersController)
 .controller('NewProductController', NewProductController)
 .controller('ProductsController', ProductsController)
+.controller('NewSaleController', NewSaleController)
+.controller('SalesController', SalesController)
 .factory('User', User)
-.factory('Product', Product);
+.factory('Product', Product)
+.factory('Sale', Sale);

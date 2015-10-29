@@ -3,6 +3,12 @@ module.exports = function(sequelize, DataTypes) {
     name: DataTypes.STRING,
     image: DataTypes.STRING,
     cost: DataTypes.DECIMAL
+  },{
+    classMethods: {
+      associate: function(models){
+        Product.hasMany(models.Sale, {foreignKey: 'product_id'})
+      }
+    }
   });
 
   return Product;
