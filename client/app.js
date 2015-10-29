@@ -7,6 +7,7 @@ import NewProductController from './controllers/products/new.js';
 import ProductsController from './controllers/products/list.js';
 import NewSaleController from './controllers/sales/new.js';
 import SalesController from './controllers/sales/list.js';
+import SaleDetailController from './controllers/sales/detail.js';
 import User from './models/user.js';
 import Product from './models/product.js';
 import Sale from './models/sale.js';
@@ -21,6 +22,7 @@ app
 .controller('ProductsController', ProductsController)
 .controller('NewSaleController', NewSaleController)
 .controller('SalesController', SalesController)
+.controller('SaleDetailController', SaleDetailController)
 .factory('User', User)
 .factory('Product', Product)
 .factory('Sale', Sale);

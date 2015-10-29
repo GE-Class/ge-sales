@@ -3,3 +3,26 @@
 <p>
   <a style="width: 150px;" class="btn btn-info" ui-sref="new_sale">New Sale</a>
 </p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Quantity</th>
+      <th>Created</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="s in sales">
+      <td><a class="btn btn-warning btn-xs" ui-sref="sale_detail({sale_id: s.id})">{{s.id}}</a></td>
+      <td>{{s.date | date}}</td>
+      <td>{{s.amount | currency}}</td>
+      <td>{{s.quantity}}</td>
+      <td>{{s.createdAt | date}}</td>
+      <td>{{s.updatedAt | date}}</td>
+    </tr>
+  </tbody>
+</table>

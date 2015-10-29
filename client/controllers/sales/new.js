@@ -1,4 +1,4 @@
-export default function($scope, User, Product, Sale){
+export default function($scope, $state, User, Product, Sale){
 
   User.all().then(res => {
     $scope.users = res.data;
@@ -10,6 +10,6 @@ export default function($scope, User, Product, Sale){
 
   $scope.add = function(){
     let s = new Sale(this.sale);
-    s.save();
+    s.save().then(res => $state.go('sales'));
   };
 }

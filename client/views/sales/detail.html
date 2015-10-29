@@ -1,0 +1,76 @@
+<h3>Sale Detail</h3>
+
+<p>
+  <a style="width: 150px;" class="btn btn-info" ui-sref="sales">Sales</a>
+</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Quantity</th>
+      <th>Created</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{sale.id}}</td>
+      <td>{{sale.date | date}}</td>
+      <td>{{sale.amount | currency}}</td>
+      <td>{{sale.quantity}}</td>
+      <td>{{sale.createdAt | date}}</td>
+      <td>{{sale.updatedAt | date}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Cost</th>
+      <th>Image</th>
+      <th>Created</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{sale.Product.id}}</td>
+      <td>{{sale.Product.name}}</td>
+      <td>{{sale.Product.cost | currency}}</td>
+      <td><img style="height: 50px;" class="img-responsive img-thumbnail" ng-src={{sale.Product.image}} /></td>
+      <td>{{sale.Product.createdAt | date}}</td>
+      <td>{{sale.Product.updatedAt | date}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Created</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{sale.User.id}}</td>
+      <td>{{sale.User.title}}</td>
+      <td>{{sale.User.name}}</td>
+      <td>{{sale.User.age}}</td>
+      <td>{{sale.User.gender}}</td>
+      <td>{{sale.User.createdAt | date}}</td>
+      <td>{{sale.User.updatedAt | date}}</td>
+    </tr>
+  </tbody>
+</table>

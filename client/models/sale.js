@@ -12,6 +12,10 @@ export default function($http){
       return $http.post('/sales', this);
     }
 
+    static findById(id){
+      return $http.get('/sales/' + id);
+    }
+
     static all(){
       return $http.get('/sales');
     }

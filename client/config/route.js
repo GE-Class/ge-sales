@@ -10,5 +10,6 @@ export default function($stateProvider, $urlRouterProvider){
   .state('products', {url: '/products', templateUrl: '/views/products/list.html', controller: 'ProductsController'})
   .state('new_product', {url: '/products/new', templateUrl: '/views/products/new.html', controller: 'NewProductController'})
   .state('sales', {url: '/sales', templateUrl: '/views/sales/list.html', controller: 'SalesController'})
-  .state('new_sale', {url: '/sales/new', templateUrl: '/views/sales/new.html', controller: 'NewSaleController'});
+  .state('new_sale', {url: '/sales/new', templateUrl: '/views/sales/new.html', controller: 'NewSaleController'})
+  .state('sale_detail', {url: '/sales/{sale_id}', templateUrl: '/views/sales/detail.html', controller: 'SaleDetailController'});
 }
