@@ -3,6 +3,10 @@ export default function($scope, $state, User){
     $scope.user = res.data;
     drawChart($scope.user.Sales);
   });
+
+  User.money($state.params.user_id).then(res => {
+    console.log(res);
+  });
 }
 
 function drawChart(sales){

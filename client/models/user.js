@@ -15,6 +15,10 @@ export default function($http){
       return $http.get('/users/' + id);
     }
 
+    static money(id){
+      return $http.get('/users/' + id + '/money');
+    }
+
     static count(page){
       return $http.get('/users/count/' + page);
     }

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var models = require('../models');
+var request = require('request');
 
 router.post('/', function(req, res){
   models.User.create({
@@ -26,6 +27,12 @@ router.get('/:user_id', function(req, res){
     limit: 1
   }).then(function(response) {
     res.send(response);
+  });
+});
+
+router.get('/:user_id/money', function(req, res){
+  request('http://localhost:5000/users/'+req.params.user_id+'/money', function(err, response, body){
+    res.send(body);
   });
 });
 
