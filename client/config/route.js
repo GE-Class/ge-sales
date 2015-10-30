@@ -7,6 +7,7 @@ export default function($stateProvider, $urlRouterProvider){
   .state('contact', {url: '/contact', templateUrl: '/views/general/contact.html'})
   .state('users', {url: '/users?page', templateUrl: '/views/users/list.html', controller: 'UsersController'})
   .state('new_user', {url: '/users/new', templateUrl: '/views/users/new.html', controller: 'NewUserController'})
+  .state('user_detail', {url: '/users/{user_id}', templateUrl: '/views/users/detail.html', controller: 'UserDetailController'})
   .state('products', {url: '/products', templateUrl: '/views/products/list.html', controller: 'ProductsController'})
   .state('new_product', {url: '/products/new', templateUrl: '/views/products/new.html', controller: 'NewProductController'})
   .state('sales', {url: '/sales', templateUrl: '/views/sales/list.html', controller: 'SalesController'})

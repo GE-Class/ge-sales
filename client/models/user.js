@@ -11,6 +11,10 @@ export default function($http){
       return $http.post('/users', this);
     }
 
+    static findById(id){
+      return $http.get('/users/' + id);
+    }
+
     static count(page){
       return $http.get('/users/count/' + page);
     }

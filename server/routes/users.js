@@ -19,6 +19,16 @@ router.get('/', function(req, res){
   });
 });
 
+router.get('/:user_id', function(req, res){
+  models.User.find({
+    where: {id: req.params.user_id},
+    include: [ { model: models.Sale, include: [ models.Product ] } ],
+    limit: 1
+  }).then(function(response) {
+    res.send(response);
+  });
+});
+
 router.get('/count/:page', function(req, res){
   models.User.findAndCountAll({
     limit: 2,
